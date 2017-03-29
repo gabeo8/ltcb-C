@@ -6,6 +6,10 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <string.h>
+
+/*
+  1,2,3,4,5,6,7 <- Hoan thanh
+*/
 //1. Tao 1 cau truc Sinhvien co the luu tru thong tin cua mot SV bao gom:
 //  MSSV, ho ten, lop, so TC tích luy, diem TB tích luy.
 typedef struct {
@@ -93,7 +97,7 @@ int main() {
 	}
 	
 	printf("\n\n--------*-IN-SV-*---------\n");
-	// In sinh vien
+	//7. In tat ca sinh vien
 	for (int j=0;j<m+n;j++){
 		printf("------------*---------\n");
 		inSinhVien(newArrSV[j]);
