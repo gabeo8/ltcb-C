@@ -63,21 +63,22 @@ int main() {
     }
   
 	//5. In Sinh vien co diem cao nhat va thap nhat
-	printf("\n------------*---------\n");
+	printf("\n-----------Max-*-Min--------\n");
 	printf("Sinh vien co diem TB cao nhat \n");
 	inSinhVien(arrSV[n-1]);
 	printf("\n------------*---------\n");
 	printf("Sinh vien co diem TB thap nhat \n");
 	inSinhVien(arrSV[0]);
+	printf("\n---------*-E-N-D-*------\n\n");
 
 	//6. Cho phep nguoi dung them vao m SV voi m nhap tu ban phim 
 	int m;
 	printf("Nhap so sinh vien muon them m = "); scanf("%d", &m); fflush(stdin);
 	//bc 1: cap phat mang moi
 	Sinhvien *newArrSV;
-	newArrSV = (Sinhvien*) malloc(m*sizeof(Sinhvien));
+	newArrSV = (Sinhvien*) malloc(m*n*sizeof(Sinhvien));
 	//bc 2: copy du lieu mang cu
-	memcpy(newArrSV, arrSV, m*sizeof(Sinhvien)); 
+	memcpy(newArrSV, arrSV, m*n*sizeof(Sinhvien)); 
 	//bc 3: xoa mang cu
 	free(arrSV);
 	//bc 4: nhap thong tin cho cac SV moi
@@ -91,13 +92,13 @@ int main() {
 		printf("Diem trung binh tich luy: "); scanf("%lf", &newArrSV[i].diemTBTL); fflush(stdin);
 	}
 	
+	printf("\n\n--------*-IN-SV-*---------\n");
 	// In sinh vien
 	for (int j=0;j<m+n;j++){
 		printf("------------*---------\n");
 		inSinhVien(newArrSV[j]);
 	}
 	
-	// Giai phong mang
 	free(newArrSV);
 	
 	return 0;
