@@ -1,0 +1,32 @@
+a. Viết chương trình init(a, n, m) thực hiện các việc sau:
+- Khởi tạo một mảng a kiểu số nguyên có kích thước m, n.
+- Mỗi phần tử của mảng a sẽ có giá trị 0 hoặc 1. Sử dụng hàm rand() để khởi tạo giá trị
+này cho các phần tử.
+
+b. Viết chương trình sumCell(a, m, n, i, j) tính tổng giá trị các ô
+xung quanh một ô a[i][j]. Biết rằng mỗi ô sẽ có 4 ô xung quanh
+(như hình bên). Có chỉ số mảng lần lượt:
+a[i-1][j], a[i+1][j], a[i][j-1], a[i][j+1]
+Lưu ý: Các ô ở các cạnh sẽ không có đủ 4 ô xung quanh.
+
+c. Viết chương trình update(a, b, n, m) để tính lại giá trị cho tất cả các ô trên mảng b dựa
+trên mảng a, qui tắc tính như sau:
+- Nếu ô a[i][j] là 1 và tổng giá trị các ô xung quanh < 1, thì gán ô b[i][j] = 0.
+- Nếu ô a[i][j] là 1 và tổng giá trị các ô xung quanh là 1 hoặc 2, thì gán ô b[i][j] =
+a[i][j].
+- Nếu ô a[i][j] là 1 và tổng giá trị các ô xung quanh > 2, thì gán ô b[i][j] = 0.
+- Nếu ô a[i][j] là 0 và tổng giá trị các ô xung quanh bằng 3, thì gán ô b[i][j] = 1.
+
+d. Viết hàm copy(a, b, m, n) để sao chép tất cả giá trị từ mảng b sang mảng a (a[i][j] =
+b[i][j].).
+
+e. Viết chương trình print(a, m, n) để in mảng a lên màn hình.
+
+f. Viết hàm main() thực hiện các việc sau:
+- Khai báo mảng 2 chiều a, b. Sử dụng hàm init(a, n, m) để khởi tạo giá trị cho mảng a.
+Với m, n được nhập từ bàn phím. Sau đó, sao chép dữ liệu mảng a sang mảng b
+(copy(b, a, m, n))
+- Thực hiện công việc sau k lần, với k được nhập từ bàn phím.
+o Cập nhật giá trị cho mảng b: update(a, b, m, n)
+o Sao chép giá trị từ mảng b sang mảng a: copy(a, b, m, n)
+- In mảng a lên màn hình.
